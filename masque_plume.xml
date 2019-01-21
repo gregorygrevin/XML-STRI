@@ -1,0 +1,650 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-stylesheet type="text/xsl" href="grevin_nicoud.xsl"?>
+
+<!DOCTYPE masque_plume SYSTEM "masque_plume.dtd">
+
+<masque_plume>
+
+	<!-- nationalités des différents films, cf. https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3 -->
+	<nationalites>
+		<pays code="inconnu">nationalité inconnue</pays>
+		<pays code="DZA">Algérie</pays>
+		<pays code="DEU">Allemagne</pays>
+		<pays code="BEL">Belgique</pays>
+		<pays code="BGR">Bulgarie</pays>
+		<pays code="CMR">Cameroon</pays>
+		<pays code="CAN">Canada</pays>
+		<pays code="ESP">Espagne</pays>
+		<pays code="USA">États-Unis</pays>
+		<pays code="FRA">France</pays>
+		<pays code="ITA">Italie</pays>
+		<pays code="LBN">Liban</pays>
+		<pays code="JPN">Japon</pays>
+		<pays code="GBR">Royaume-Uni</pays>
+		<pays code="CHE">Suisse</pays>
+		<pays code="SYR">Syrie</pays>
+	</nationalites>
+
+	<editeurs>
+		<editeur id="seuil" site_web="http://www.seuil.com/">
+			<nom>Seuil</nom>
+		</editeur>
+			
+		<editeur id="gallimard" site_web="http://www.gallimard.fr/">
+			<nom>Gallimard</nom>
+		</editeur>
+
+		<editeur id="flammarion" site_web="http://editions.flammarion.com/">
+			<nom>Flammarion</nom>
+		</editeur>
+
+		<editeur id="grasset" site_web="https://www.grasset.fr/">
+			<nom>Grasset</nom>
+		</editeur>
+
+		<editeur id="julliard" site_web="http://www.julliard.fr/">
+			<nom>Julliard</nom>
+		</editeur>
+
+		<editeur id="buchet-chastel" site_web="http://www.buchetchastel.fr/">
+			<nom>Buchet-Chastel</nom>
+		</editeur>
+
+		<editeur id="albin_michel" site_web="http://www.albin-michel.fr/">
+			<nom>Albin Michel</nom>
+		</editeur>
+
+		<editeur id="viviane_hamy" site_web="http://www.viviane-hamy.fr/">
+			<nom>Viviane Hamy</nom>
+		</editeur>
+
+		<editeur id="editions_minuit" site_web="http://www.leseditionsdeminuit.fr/">
+			<nom>Minuit</nom>
+		</editeur>
+
+		<editeur id="j.c._lattes" site_web="http://www.editions-jclattes.fr/">
+			<nom>J.C. Lattès</nom>
+		</editeur>
+
+		<editeur id="actes_sud" site_web="https://www.actes-sud.fr/">
+			<nom>Actes Sud</nom>
+		</editeur>
+
+		<editeur id="mercure_de_france" site_web="https://www.mercuredefrance.fr/">
+			<nom>Mercure de France</nom>
+		</editeur>
+	</editeurs>	
+
+	<!-- le choix a été fait de modéliser avec le même élément <artiste>
+	     les différents artistes intervenant dans la création des :
+	     - livres : auteurs
+	     - films : réalisateurs, scénaristes, acteurs
+	     - pièces de théâtre : auteurs, metteurs en scènes, comédiens (non traité dans ce TP)
+	     sachant que potentiellement, un même artiste peut être tour à tour
+	     auteur, acteur, réalisateur... 
+	     On s'est limité aux biographies (volontairement plutôt courtes et toutes
+	     issues, sauf mention contraire, de https://fr.wikipedia.org) des seuls auteurs et
+	     réalisateurs ; en outre, pour chaque artiste, la balise <biographie> comprend
+	     une ou plusieurs sous-balises <titre>...</titre> marquant sémantiquement
+	     un titre de livre, journal, film, émission... -->
+
+	<artistes>
+		<artiste id="d_al_joundi" sexe="F" pays="LBN SYR">
+			<prenom>Darina</prenom>
+			<nom>Al Joundi</nom>
+		</artiste>
+		<artiste id="c_angot" sexe="F" pays="FRA">
+			<prenom>Christine</prenom>
+			<nom>Angot</nom>
+			<biographie>
+				Christine Angot, née Christine Schwartz le 7 février 1959 à Châteauroux, est romancière et dramaturge française. Elle pratique fréquemment la lecture publique de ses textes, notamment sur scène. Figure emblématique de l'autofiction, terme qu'elle rejette cependant, son œuvre littéraire, ses nombreux articles ainsi que ses interventions médiatiques suscitent souvent la controverse. Elle est depuis la parution de L'Inceste en 1999 une personnalité de la littérature francophone contemporaine, lauréate du prix France Culture en 2005, du prix de Flore en 2006 et du prix Décembre en 2015.
+				Depuis septembre 2017, elle est chroniqueuse dans l'émission <titre>On n'est pas couché</titre>, présentée par Laurent Ruquier, au côté de Yann Moix (2017-2018) puis de Charles Consigny (depuis septembre 2018) sur France 2.
+			</biographie>
+		</artiste>
+		<artiste id="j_aviat" sexe="M" pays="FRA">
+			<prenom>Jean</prenom>
+			<nom>Aviat</nom>
+		</artiste>
+		<artiste id="jp_bacri" sexe="M" pays="FRA">
+			<prenom>Jean-Pierre</prenom>
+			<nom>Bacri</nom>
+		</artiste>
+		<artiste id="e_baer" sexe="M" pays="FRA">
+			<prenom>Edouard</prenom>
+			<nom>Baer</nom>
+		</artiste>
+		<artiste id="j_barnes" sexe="M" pays="GBR">
+			<prenom>Julian</prenom>
+			<nom>Barnes</nom>
+			<biographie>
+				  Julian Barnes, né le 19 janvier 1946 à Leicester, est un romancier, nouvelliste, essayiste et journaliste britannique publiant également des romans policiers sous le pseudonyme de Dan Kavanagh.
+			</biographie>
+		</artiste>
+		<artiste id="a_blazy" sexe="M" pays="FRA">
+			<prenom>Alexandre</prenom>
+			<nom>Blazy</nom>
+		</artiste>
+		<artiste id="l_calamy" sexe="F" pays="FRA">
+			<prenom>Laure</prenom>
+			<nom>Calamy</nom>
+		</artiste>
+		<artiste id="l_capelluto" sexe="M" pays="BEL">
+			<prenom>Laurent</prenom>
+			<nom>Capelluto</nom>
+		</artiste>
+		<artiste id="e_cazenave" sexe="F" pays="FRA">
+			<prenom>Émilie</prenom>
+			<nom>Cazenave</nom>
+		</artiste>
+		<artiste id="g_clerice" sexe="M" pays="inconnu">
+			<prenom>Guillaume</prenom>
+			<nom>Clerice</nom>
+		</artiste>
+		<artiste id="c_cottin" sexe="F" pays="FRA">
+			<prenom>Camille</prenom>
+			<nom>Cottin</nom>
+		</artiste>
+		<artiste id="p_deladonchamps" sexe="M" pays="FRA">
+			<prenom>Pierre</prenom>
+			<nom>Deladonchamps</nom>
+		</artiste>
+		<artiste id="g_delerm" sexe="F" pays="inconnu">
+			<prenom>Graziella</prenom>
+			<nom>Delerm</nom>
+		</artiste>
+		<artiste id="b_di_marco" sexe="M" pays="inconnu">
+			<prenom>Benoît</prenom>
+			<nom>Di Marco</nom>
+		</artiste>
+		<artiste id="c_de_france" sexe="F" pays="BEL">
+			<prenom>Cécile</prenom>
+			<nom>De France</nom>
+		</artiste>
+		<artiste id="n_dontcheva" sexe="F" pays="FRA BGR">
+			<prenom>Natalia</prenom>
+			<nom>Dontcheva</nom>
+		</artiste>
+		<artiste id="l_halliday" sexe="F" pays="USA">
+			<prenom>Lisa</prenom>
+			<nom>Halliday</nom>
+			<!-- source : https://www.babelio.com -->
+			<biographie>
+				  Lisa Halliday, originaire du Massachusetts, vit à Milan où elle éditrice et traductrice. Elle a auparavant travaillé pendant une dizaine d'années pour l'agence littéraire Wylie. Ses écrits ont été publiés dans <titre>The Paris Review</titre> et <titre>Asymétrie</titre>, son premier roman, a reçu le prix "Writing" de la meilleure fiction en 2017.
+			</biographie>
+		</artiste>
+		<artiste id="m_higashide" sexe="M" pays="JPN">
+			<prenom>Masahiro</prenom>
+			<nom>Higashide</nom>
+		</artiste>
+		<artiste id="w_houston" sexe="F" pays="USA">
+			<prenom>Whytney</prenom>
+			<nom>Houston</nom>
+		</artiste>
+		<artiste id="a_isaaz" sexe="M" pays="FRA">
+			<prenom>Alice</prenom>
+			<nom>Isaaz</nom>
+		</artiste>
+		<artiste id="kaho" sexe="F" pays="JPN">
+			<prenom></prenom>
+			<nom>Kaho</nom>
+		</artiste>
+		<artiste id="k_kurosawa" sexe="M" pays="JPN">
+			<prenom>Kiyoshi</prenom>
+			<nom>Kurosawa</nom>
+			<biographie>
+				  Kiyoshi Kurosawa est un réalisateur et scénariste japonais né le 19 juillet 1955 à Kōbe. Il est considéré comme l'un des artistes marquants du renouveau du cinéma japonais.
+				  Tout comme Hideo Nakata, Kiyoshi Kurosawa réalise des séries B mais également des longs-métrages à la portée plus universelle. En vingt ans de carrière, il a réalisé une vingtaine de films. Kiyoshi Kurosawa n'a pas de lien de parenté avec Akira Kurosawa.
+			</biographie>
+		</artiste>
+		<artiste id="v_lacoste" sexe="M" pays="FRA">
+			<prenom>Vincent</prenom>
+			<nom>Lacoste</nom>
+		</artiste>
+		<artiste id="jm_lahmi" sexe="M" pays="FRA">
+			<prenom>Jean-Michel</prenom>
+			<nom>Lahmi</nom>
+		</artiste>
+		<artiste id="c_lauby" sexe="F" pays="FRA">
+			<prenom>Chantal</prenom>
+			<nom>Lauby</nom>
+		</artiste>
+		<artiste id="w_lebghil" sexe="M" pays="FRA">
+			<prenom>William</prenom>
+			<nom>Lebghil</nom>
+		</artiste>
+		<artiste id="m_lerousseau" sexe="M" pays="inconnu">
+			<prenom>Michel</prenom>
+			<nom>Lerousseau</nom>
+		</artiste>
+		<artiste id="t_lilti" sexe="M" pays="FRA">
+			<prenom>Thomas</prenom>
+			<nom>Lilti</nom>
+			<biographie>
+				  Thomas Lilti, né le 30 mai 1976, est un médecin généraliste, réalisateur et scénariste français.
+			</biographie>
+		</artiste>
+		<artiste id="g_londez" sexe="F" pays="FRA">
+			<prenom>Guilaine</prenom>
+			<nom>Londez</nom>
+		</artiste>
+		<artiste id="k_macdonald" sexe="M" pays="GBR">
+			<prenom>Kevin</prenom>
+			<nom>Macdonald</nom>
+			<biographie>
+				  Kevin Macdonald (né le 28 octobre 1967 (50 ans) à Glasgow) est un réalisateur, documentariste écossais, également scénariste et producteur.
+				  Après une carrière de documentariste à succès, qui culmine avec <titre>Un jour en septembre</titre> (1999) et <titre>La Mort suspendue</titre> (2003), il passe à la fiction en signant le biopic <titre>Le Dernier Roi d'Écosse</titre> (2007), un succès critique et commercial. Cependant, ses deux projets hollywoodiens suivants - le thriller politique <titre>Jeux de pouvoir</titre> (2009) et le peplum <titre>L'Aigle de la Neuvième Légion</titre> (2011) - déçoivent au box-office.
+				  Depuis, il alterne films indépendants britanniques - <titre>Maintenant c'est ma vie</titre> (2013), avec Saoirse Ronan et <titre>Black Sea</titre> (2014), avec Jude Law - et documentaires : citons <titre>Marley</titre> (2012) et <titre>Whitney</titre> (2018), consacrés aux stars de la musique éponymes, ou encore <titre>Sky Ladder: The Art of Cai Guo-Qiang</titre> (2016).
+			</biographie>
+		</artiste>
+		<artiste id="e_mouret" sexe="M" pays="FRA">
+			<prenom>Emmanuel</prenom>
+			<nom>Mouret</nom>
+			<!-- source : http://www.premiere.fr -->
+			<biographie>
+				  Né en 1970 à Marseille, Emmanuel Mouret quitte sa ville natale pour intégrer le département réalisation de la FEMIS dont il sort diplômé en 1998.Son film de fin d’études <titre>Promène-toi donc tout nu !</titre> lui vaut un large succès critique. A l’instar de ses principales influences, Sacha Guitry et  Woody Allen, il est à la fois réalisateur et acteur de ses propres films. Dans <titre>Laissons Lucie faire</titre> (2000), il se met en scène aux côtés de Marie Gillain.
+				  En 2004, il fait appel à des acteurs moins connus pour <titre>Vénus et Fleur</titre>, l’histoire d’une rencontre entre deux jeunes filles à la recherche de l’homme idéal. Son premier grand succès viendra avec <titre>Changement d’adresse</titre> (2006) où il interprète un musicien maladroit prêt à tout pour séduire son élève jouée par <titre>Fanny Valette</titre> et où il sera aidé dans cette entreprise par <titre>Frédérique Bel</titre>.
+				  En 2007, il revient avec <titre>Un baiser s’il vous plait !</titre> un film sur le désir et les conséquences d’un baiser où il réunit Virginie Ledoyen, Julie Gayet et Michael Cohen. Toujours dans la veine romantique et burlesque, il réalise <titre>Fais-moi plaisir</titre> dans lequel il retrouve Frédérique Bel. Il retrouve encore une fois l'actrice en 2011, avec une grande brochette d'acteurs pour sa comédie <titre>L'art d'aimer</titre> dans lequel il ne joue qu'un petit rôle.
+			</biographie>
+		</artiste>
+		<artiste id="b_mcneese" sexe="F" pays="BEL USA">
+			<prenom>Bérangère</prenom>
+			<nom>McNeese</nom>
+		</artiste>
+		<artiste id="s_niakate" sexe="M" pays="inconnu">
+			<prenom>Sadio</prenom>
+			<nom>Niakate</nom>
+		</artiste>
+		<artiste id="s_nkake" sexe="F" pays="FRA CMR">
+			<prenom>Sandra</prenom>
+			<nom>Nkake</nom>
+		</artiste>
+		<artiste id="g_oestermann" sexe="M" pays="FRA">
+			<prenom>Grégoire</prenom>
+			<nom>Oestermann</nom>
+		</artiste>
+		<artiste id="v_paradis" sexe="F" pays="FRA">
+			<prenom>Vanessa</prenom>
+			<nom>Paradis</nom>
+		</artiste>
+		<artiste id="c_rouaud" sexe="F" pays="FRA">
+			<prenom>Cécilia</prenom>
+			<nom>Rouaud</nom>
+			<biographie>
+				  Cécilia Rouaud est une réalisatrice, scénariste, cinéaste française. Elle a notamment réalisé en 2012 le film <titre>Je me suis fait tout petit</titre> avec Denis Menochet, Vanessa Paradis, Léa Druker et Laurent Lucas. Son dernier film <titre>Photo de famille</titre> est sorti le 5 septembre 2018.
+			</biographie>
+		</artiste>
+		<artiste id="m_ruchmann" sexe="F" pays="FRA">
+			<prenom>Marc</prenom>
+			<nom>Ruchmann</nom>
+		</artiste>
+		<artiste id="b_sansal" sexe="M" pays="DZA">
+			<prenom>Boualem</prenom>
+			<nom>Sansal</nom>
+			<biographie>
+				  Boualem Sansal, né le 15 octobre 1949 à Theniet El Had, petit village des monts de l’Ouarsenis, est un écrivain algérien d'expression française, principalement romancier mais aussi essayiste, censuré en Algérie à cause de sa position très critique envers le pouvoir en place. Il est en revanche très reconnu en France et en Allemagne, pays dans lesquels ses romans rencontrent un grand succès public, et où il a reçu de nombreux prix.
+			</biographie>
+		</artiste>
+		<artiste id="v_schneider" sexe="F" pays="FRA">
+			<prenom>Vanessa</prenom>
+			<nom>Schneider</nom>
+			<!-- source : https://www.babelio.com -->
+			<biographie>
+				  Vanessa Schneider, née en 1969 à Puteaux (Hauts-de-Seine), est une journaliste politique.
+				  Journaliste politique à Libération en 1994, Vanessa Schneider devient Reporter pour l'Agence CAPA en février 2007. Parallèlement, Vanessa Schneider travaille pour l'émission <titre>Dimanche+</titre> sur Canal+ et, toujours sur la même chaîne, fut polémiste dans l'émission <titre>Un Café, L'Addition</titre>, de Pascale Clark (septembre 2007-juin 2008). Vanessa Schneider est également une chroniqueuse régulière sur RTL dans l'émission <titre>On refait le monde</titre>, alors animée par Nicolas Poincaré. Depuis novembre 2009 elle est grand reporter à Marianne.
+			</biographie>
+		</artiste>
+		<artiste id="n_silvania" sexe="F" pays="inconnu">
+			<prenom>Noémi</prenom>
+			<nom>Silvania</nom>
+		</artiste>
+		<artiste id="s_sometani" sexe="M" pays="JPN">
+			<prenom>Shôta</prenom>
+			<nom>Sometani</nom>
+		</artiste>
+		<artiste id="h_takahashi" sexe="M" pays="JPN">
+			<prenom>Hiroshi</prenom>
+			<nom>Takahashi</nom>
+		</artiste>
+		<artiste id="r_vega" sexe="M" pays="FRA">
+			<prenom>Rio</prenom>
+			<nom>Vega</nom>
+		</artiste>
+		<artiste id="c_walker" sexe="F" pays="FRA">
+			<prenom>Claudette</prenom>
+			<nom>Walker</nom>
+		</artiste>
+		<artiste id="w_wenders" sexe="M" pays="DEU">
+			<prenom>Wim</prenom>
+			<nom>Wenders</nom>
+			<biographie>
+				  Wilhelm Ernst Wenders, dit Wim Wenders, né le 14 août 1945 à Düsseldorf, Land de Rhénanie-du-Nord-Westphalie, est un réalisateur, producteur, scénariste de cinéma et photographe allemand. Il est l'un des représentants majeurs du nouveau cinéma allemand des années 1960-70. Actuellement, il travaille principalement aux États-Unis.
+			</biographie>
+		</artiste>
+	</artistes>
+
+	<!-- organes de presse (journeaux, magazines...) -->
+	<organes_de_presse>
+		<organe_de_presse id="la_croix" site_web="https://www.la-croix.com">
+			<nom>La Croix</nom>
+		</organe_de_presse>
+		<organe_de_presse id="la_nrf" site_web="http://www.lanrf.fr">
+			<nom>La Nouvelle Revue Française</nom>
+		</organe_de_presse>
+		<organe_de_presse id="la_7eme_obsession" site_web="http://www.laseptiemeobsession.com">
+			<nom>La Septième Obsession</nom>
+		</organe_de_presse>
+		<organe_de_presse id="le_figaro" site_web="http://www.lefigaro.fr">
+			<nom>Le Figaro</nom>
+		</organe_de_presse>
+		<organe_de_presse id="sud_ouest" site_web="https://www.sudouest.fr">
+			<nom>Sud-Ouest</nom>
+		</organe_de_presse>
+		<organe_de_presse id="telerama" site_web="https://www.telerama.fr">
+			<nom>Télérama</nom>
+		</organe_de_presse>
+		<organe_de_presse id="transfuge" site_web="https://www.transfuge.fr">
+			<nom>Transfuge</nom>
+		</organe_de_presse>
+	</organes_de_presse>
+
+	<!-- on ne fait figurer ici que l'animateur actuel de l'émission, mais il y a en eu
+	     d'autres avant lui qui pourrait aussi figurer ici si le document comprenait
+	     les émissions s'étalant sur un plus grand nombre d'années -->
+	<animateurs>
+		<animateur id="j_garcin" sexe="M" pays="FRA">
+			<prenom>Jérôme</prenom>
+			<nom>Garcin</nom>
+		</animateur>
+	</animateurs>
+
+	<!-- le choix a été fait ici – par simplicité – de ne pas permettre de mutualisation
+	     avec les artistes, en ne traitant donc pas le cas d'un critique également artiste,
+	     alors que certains critiques ont par ex. publié des livres, et qu'il existe
+	     des exemples de grands écrivains ayant également été critique, comme Bertolt Brecht ;
+	     notons qu'une possisibilité de mutualisation aurait été de prévoir, pour un critique
+	     également artiste, de renseigner un attribut 'artiste' permettant de le référencer
+	     en tant qu'artiste (sans renseigner alors les sous-balises <prenom>, <nom>, ainsi
+	     que les attributs 'sexe' et 'pays') -->
+
+	<critiques>
+		<!-- critiques littéraires -->
+		<critique id="jc_raspiengeas" sexe="M" pays="FRA" organe_de_presse="la_croix">
+			<prenom>Jean-Claude</prenom>
+			<nom>Raspiengeas</nom>
+		</critique>
+		<critique id="m_crepu" sexe="M" pays="FRA" organe_de_presse="la_nrf">
+			<prenom>Michel</prenom>
+			<nom>Crépu</nom>
+		</critique>
+		<critique id="e_neuhoff" sexe="M" pays="FRA" organe_de_presse="le_figaro">
+			<prenom>Éric</prenom>
+			<nom>Neuhoff</nom>
+		</critique>
+		<critique id="a_viviant" sexe="M" pays="FRA" organe_de_presse="transfuge">
+			<prenom>Arnaud</prenom>
+			<nom>Viviant</nom>
+		</critique>
+
+		<!-- critiques cinématographiques -->
+		<critique id="s_avon" sexe="F" pays="FRA" organe_de_presse="sud_ouest">
+			<prenom>Sophie</prenom>
+			<nom>Avon</nom>
+		</critique>
+		<!-- Eric Neuhoff est déjà défini comme critique littéraire -->
+		<critique id="p_murat" sexe="M" pays="FRA" organe_de_presse="telerama">
+			<prenom>Pierre</prenom>
+			<nom>Murat</nom>
+		</critique>
+		<critique id="x_leherpeur" sexe="M" pays="FRA" organe_de_presse="la_7eme_obsession">
+			<prenom>Xavier</prenom>
+			<nom>Leherpeur</nom>
+		</critique>
+
+		<!-- critiques dramatiques (non traités ici) -->
+
+	</critiques>
+
+	<!-- liste des émissions traitées -->
+	<emissions>
+
+		<emission date="2018-09-09" type="littéraire" animateur="j_garcin"
+			      critiques="jc_raspiengeas m_crepu e_neuhoff a_viviant">
+			<titre>
+				Les nouveaux livres de Christine Angot, Boualem Sansal, Julian Barnes… que lire en cette rentrée littéraire ?
+			</titre>
+			<sous-titre>
+				Non loin des auteurs, nos critiques vont-ils fustiger ou encenser les livres de Christine Angot, Boualem Sansal, Julian Barnes, Vanessa Schneider et Lisa Halliday ?
+			</sous-titre>
+
+			<livres>
+
+				<!-- pour chaque livre, la balise <resume> peut contenir une ou plusieurs
+				     sous-balises <extrait>...</extrait> ou <titre>...</titre> marquant
+				     sémantiquement un extrait du livre en question,
+				     ou le titre d'un livre ou d'une de ses parties (ou bien d'un film)
+				     en rapport, ainsi que des sous-balises <important>...</important>
+				     indiquant des passages jugés comme important ;
+				     en outre, ce résumé est celui figurant sur le site de l'émission, qui diffère en général de celui figurant sur le site de l'éditeur -->
+
+				<livre id="un_tournant_de_la_vie" auteur="c_angot" editeur="flammarion"
+				       date_parution="2018-08-29" nb_pages="192" isbn="9782081444218" prix="18">
+					<titre>Un tournant de la vie</titre>
+					<resume>
+						La narratrice, qui ressemble beaucoup à l’auteure, vit avec un musicien, qui est antillais et s’appelle Alex. Un jour, dans la rue, elle aperçoit Vincent, qu’elle a follement aimé et qui, lui, ressemble beaucoup à Doc Gynéco. Du moins celui du <titre>Marché des amants</titre>. En l’apercevant presque dix ans après leur séparation, elle a, je cite, <extrait>le cœur battant</extrait> et <extrait>les jambes coupées</extrait>.
+						Comme dans <titre>Jules et Jim</titre>, vers quoi lorgne Christine Angot, la narratrice <important>balance entre le désir et la fidélité</important>, son ex et Alex, entre <extrait>ses deux mecs</extrait>, qui ont en plus la fâcheuse idée de travailler ensemble. Jusqu’à cet aveu, page 147 : <extrait>J’en peux plus d'Alex. J’ai pas une phrase qui tient debout</extrait>...
+					</resume>
+					<personnages>
+						<personnage>Narratrice</personnage>
+						<personnage>Alex</personnage>
+						<personnage>Vincent</personnage>
+					</personnages>
+				</livre>
+
+				<livre id="le_train_d_erlinger" auteur="b_sansal" editeur="gallimard"
+					   date_parution="2018-08-16" nb_pages="256" isbn="9782072798399" prix="20">
+					<titre>Le train d’Erlingen</titre>
+					<sous-titre>La métamorphose de Dieu</sous-titre>
+					<resume>
+						Boualem Sansal est l’auteur algérien du <titre>Serment des Barbares</titre> et de <titre>2084, la fin du monde</titre> (une dystopie qui lui a valu le Grand prix de l’Académie française).
+						L’histoire se passe en Allemagne, à Erlingen, dont la population se sent assiégée par de mystérieux et terrifiants ennemis, « Les Serviteurs », qui obéissent à la seule loi divine. Une population qui attend – d’où le titre – <important>le train qui doit l’évacuer, mais qui ne vient pas</important>. 
+						C’est raconté par Ute Von Ebert, la dernière héritière d’un empire industriel allemand, dans les lettres qu’elle envoie à sa fille Hannah, qui a 26 ans et vit à Londres. L’histoire de cette héritière épistolière étant racontée avant qu’elle ne meure par une victime des attentats de 2015 à Paris, Elisabeth Potier de St-Denis. On voit que Sansal est fidèle à son <important>combat contre l’extrémisme religieux et contre la lâcheté, l’aveuglement des démocraties occidentales.</important> 
+					</resume>
+					<personnages>
+						<personnage>Ute Von Ebert</personnage>
+						<personnage>Hannah</personnage>
+						<personnage>Elisabeth Potier de St-Denis</personnage>
+					</personnages>
+				</livre>
+
+				<livre id="la_seule_histoire" auteur="j_barnes" editeur="mercure_de_france"
+					   date_parution="2018-09-06" nb_pages="272" isbn="9782715247079" prix="22.8">
+					<titre>La seule histoire</titre>
+					<resume>
+						Tout commence, il y a plus d’un demi-siècle, sur un terrain de tennis de la banlieue résidentielle de Londres. Il suffit à  Paul, 19 ans, et  Suzan, 48 ans, de disputer un tournoi double mixte pour tomber amoureux.
+						Paul est étudiant en droit et il vit chez ses parents. Suzan est mariée à un gros qui la frappe et elle a deux filles. Leur liaison provoque un tel scandale qu’ils sont obligés de s’enfuir à Londres. De manière très méthodique, Barnes raconte comment, pendant une dizaine d’années, le couple va tenter de survivre à cette passion avant de sombrer. Car Suzan est alcoolique et Paul n’arrive pas à la sauver.
+						Une version anglaise du <titre>Diable au corps</titre>.
+					</resume>
+					<personnages>
+						<personnage>Paul</personnage>
+						<personnage>Suzan</personnage>
+					</personnages>
+				</livre>
+
+				<livre id="tu_t_appelais_maria_schneider" auteur="v_schneider" editeur="grasset"
+					   date_parution="2018-08-16" nb_pages="256" isbn="224686108X" prix="19">
+					<titre>Tu t'appelais Maria Schneider</titre>
+					<resume>
+						Vanessa Schneider consacre un récit à <important>feue sa cousine Maria Schneider</important>. Ou plutôt la lettre posthume et publique qu’elle lui adresse, sept ans après sa disparition.
+						Maria Schneider, la comédienne dont la vie, en 1971, est devenue un cauchemar. Elle avait alors 19 ans quand elle tourna, sous la direction de Bertolucci, <titre>Un dernier tango à Paris</titre>, avec Marlon Brando à qui, sans rien en dire à Maria Schneider, Bertolucci suggéra <important>une scène de sodomie</important> qui n’était pas dans le scénario. Pour Maria, à la fois trahie et symboliquement violée, ce fut un traumatisme. Et le début de sa descente aux enfers, dans l’alcool et la drogues, avec tentatives de suicide et séjours psychiatriques à Sainte-Anne. Jusqu’à sa mort, d’un cancer du poumon, à 58 ans, en 2011. Dans son livre, Vanessa Schneider raconte comment sa famille a tenu lieu de refuge pour Maria Schneider, qui fut aussi <important>la muse de Patti Smith...</important>
+					</resume>
+					<personnages>
+						<personnage>Maria Schneider</personnage>
+						<personnage>Bernardo Bertolucci</personnage>
+						<personnage>Marlon Brando</personnage>
+						<personnage>Patti Smith</personnage>
+					</personnages>
+				</livre>
+
+				<livre id="asymetrie" auteur="l_halliday" editeur="gallimard"
+					   date_parution="2018-08-16" nb_pages="352" isbn="9782072728792" prix="21.5">
+					<titre>Asymétrie</titre>
+					<resume>
+						Le premier roman de l’Américaine Lisa Halliday fait sensation. Elle romance en effet sa rencontre amoureuse à New York, dans une maison d’édition, avec un grand écrivain de 45 ans son aîné, qui pourrait être son grand-père, un certain Ezra Blazer, qui n’est autre que Philip Roth, disparu le 22 mai dernier, à 85 ans.
+						Il a la peau <extrait>fraîche et ridée</extrait>, ses lèvres sont <extrait>toutes douces</extrait>. Cette <important>relation charnelle et intellectuelle</important> constitue la première partie du roman, <titre>Folie</titre>, la suite (intitulée <titre>Furie</titre>) se déroulant en Angleterre.
+						Pendant qu’Alice et Ezra jouent au Scrabble ou regardent un match de base-ball à New York, Amar Jaafari, un économiste qui tente de rejoindre sa famille en Irak, est retenu et interrogé à l’aéroport de Londres. Tout l’art de Lisa Halliday consistant à enchâsser ces deux récits, jusqu’à l’interview d’Ezra, qui clôt le roman et l’unifie. 
+					</resume>
+					<personnages>
+						<personnage>Alice</personnage>
+						<personnage>Ezra</personnage>
+						<personnage>Amar Jaafari</personnage>
+					</personnages>
+				</livre>
+
+			</livres>
+		</emission>
+
+		<emission date="2018-09-16" type="cinématographique" animateur="j_garcin"
+			      critiques="s_avon e_neuhoff p_murat x_leherpeur">
+			<titre>
+				Faut-il aller voir les films de Wim Wenders, Thomas Lilti, Cécilia Rouaud, Emmanuel Mouret… ?
+			</titre>
+			<sous-titre>
+				Nos critiques Sophie Avon (Sud-Ouest), Eric Neuhoff (Le Figaro), Pierre Murat (Télérama), et Xavier Leherpeur (7ème Obsession) ont-ils aimé "Photo de Famille", "Première année", "Mademoiselle de Joncquières", "Invasion", "Le Pape François" et "Whitney" ?
+			</sous-titre>
+
+			<films>
+
+				<!-- pour chaque film, la balise <synopsis> peut contenir une ou plusieurs
+				     sous-balises <titre>...</titre> marquant
+				     sémantiquement le titre d'un film (ou bien d'un livre)
+				     en rapport, ainsi que des sous-balises <important>...</important>
+				     indiquant des passages jugés comme important ;
+				     en outre, ce synopsis est celui figurant sur le site de l'émission, qui diffère en général de celui (officiel) sur http://www.allocine.fr -->
+
+				<film id="invasion" pays="JPN" annee_production="2017"
+					  duree="PT2H20M" date_sortie="2018-09-05">
+					<titre>Invasion</titre>
+					<synopsis>
+						Où l’on voit le ciel de Tokyo s’obscurcir, <important>les humains perdre leurs émotions et les extra-terrestres préparer leur invasion.</important>
+						Au début, une jeune ouvrière remarque que son mari, qui travaille à l’hôpital, devient très étrange et souffre du bras droit. Tandis qu’une de ses collègues tient son père pour un fantôme. Les victimes d’une mystérieuse emprise vont se multiplier autour d’elle. Déguisés en humains, les extraterrestres posent leur doigt sur le front des victimes qui sont, aussitôt, déshumanisées, décervelées... Et il pleut, il n’arrête pas de pleuvoir. 
+					</synopsis>
+					<casting realisateurs="k_kurosawa"
+					         scenaristes="k_kurosawa h_takahashi" />
+					<personnages>
+						<personnage incarne_par="kaho">Etsuko</personnage>
+						<personnage incarne_par="s_sometani">Tatsuo</personnage>
+						<personnage incarne_par="m_higashide">Dr. Makabe</personnage>
+					</personnages>
+				</film>
+
+				<film id="photo_de_famille" pays="FRA" annee_production="2018"
+					  duree="PT1H38M" date_sortie="2018-09-05">
+					<titre>Photo de Famille</titre>
+					<synopsis>
+						Voici le deuxième film de Cécilia Rouaud, avec Vanessa Paradis, Camille Cottin, Pierre Deladonchamps, Jean-Pierre Bacri et Chantal Lauby.
+						Bacri et Lauby ont trois enfants : Gabrielle (Vanessa Paradis) qui fait la manche en statue dorée et honte à son ado de fils ; Elsa (Camille Cottin), qui crève de ne pouvoir être enceinte, et Mao (Pierre Deladonchamps), un game designer qui veut mettre fin à ses jours en se jetant dans la Seine. Trois enfants, dont les parents soixante-huitards ont raté l’éducation, qui s’évitent soigneusement. Ils se retrouvent que pour s’occuper de leur grand-mère Alzheimer et se souvenir de la maison de vacances, aujourd’hui vendue, où ils furent si heureux. <important>Une comédie légère sur la famille décomposée.</important>
+					</synopsis>
+					<casting realisateurs="c_rouaud"
+					         scenaristes="c_rouaud" />
+					<personnages>
+						<personnage incarne_par="v_paradis">Gabrielle</personnage>
+						<personnage incarne_par="c_cottin">Elsa</personnage>
+						<personnage incarne_par="p_deladonchamps">Mao</personnage>
+						<personnage incarne_par="jp_bacri">Pierre</personnage>
+						<personnage incarne_par="c_lauby">Claudine</personnage>
+						<personnage incarne_par="j_aviat">Solal</personnage>
+						<personnage incarne_par="m_ruchmann">Stéphane</personnage>
+						<personnage incarne_par="c_walker">Mamie</personnage>
+						<personnage incarne_par="l_capelluto">Tom</personnage>
+						<personnage incarne_par="e_cazenave">Sandrine</personnage>
+						<personnage incarne_par="g_londez">Françoise</personnage>
+						<personnage incarne_par="s_nkake">Dominique</personnage>
+						<personnage incarne_par="r_vega">Kevin</personnage>
+						<personnage incarne_par="s_niakate">Moussa</personnage>
+						<personnage incarne_par="b_mcneese">Clara</personnage>
+						<personnage incarne_par="g_oestermann">Le policier</personnage>
+					</personnages>
+				</film>
+
+				<film id="premiere_annee" pays="FRA" annee_production="2018"
+					  duree="PT1H32M" date_sortie="2018-09-12">
+					<titre>Première année</titre>
+					<synopsis>
+						Un film du cinéaste et médecin Thomas Lilti, qui a déjà réalisé <titre>Hippocrate</titre> (2014) et <titre>Médecin de campagne</titre> (2016).
+						Dans ce film, il décrit <important>la première année de fac de médecine</important>, au terme de laquelle un impitoyable concours offre ou refuse aux étudiants le droit d’apprendre à soigner. Il suit deux étudiants devenus amis : Antoine (Vincent Lacoste), qui tente ce concours pour la troisième fois, et Benjamin (William Lebghil), qui est fils de médecin et vient d’avoir son bac. Le film raconte leur préparation à l’épreuve finale, qui ressemble à une version folle de <titre>Questions pour un champion</titre>.
+						Selon Thomas Lilti, la première année de médecine est fondée sur la compétitivité à tout crin, la rivalité, la performance. 
+					</synopsis>
+					<casting realisateurs="t_lilti"
+					         scenaristes="t_lilti" />
+					<personnages>
+						<personnage incarne_par="v_lacoste">Antoine Verdier</personnage>
+						<personnage incarne_par="w_lebghil">Benjamin Sitbon</personnage>
+						<personnage incarne_par="m_lerousseau">Serge</personnage>
+						<personnage incarne_par="d_al_joundi">Martine</personnage>
+						<personnage incarne_par="b_di_marco">François</personnage>
+						<personnage incarne_par="g_delerm">Annick</personnage>
+						<personnage incarne_par="g_clerice">Vincent Grimaldi</personnage>
+						<personnage incarne_par="a_blazy">Simon Sitbon</personnage>
+						<personnage incarne_par="n_silvania">Nenni</personnage>
+					</personnages>
+				</film>
+
+				<film id="mlle_de_jonquieres" pays="FRA" annee_production="2017"
+					  duree="PT1H49M" date_sortie="2018-09-12">
+					<titre>Mademoiselle de Joncquières</titre>
+					<synopsis>
+						L’adaptation d’un passage de <titre>Jacques le Fataliste</titre>, le roman philosophique de Diderot, par Emmanuel Mouret, le cinéaste de <titre>L’art d’aimer</titre> et de <titre>Caprice</titre> qui, pour la première fois, s’essaie au film à costumes. Des costumes qui vont très bien à Cécile de France et à Édouard Baer (que vous retrouverez ce soir en direct, de 22h à minuit, pour <titre>Lumières dans la nuit</titre>, sa nouvelle émission d’Inter).
+						<important>Madame de La Pommeraye</important> (Cécile de France) est une <important>jeune veuve qui s’est retirée du monde</important>, mais a <important>fini par céder aux avances du très libertin marquis des Arcis</important> (Edouard Baer). <important>Jusqu’au jour où elle découvre que le marquis s’est lassé</important> de leur idylle. Elle décide alors de <important>se venger</important> avec la complicité de Mademoiselle de Joncquières, jouée par Alice Isaaz, et de la mère de cette dernière, qui sont ce qu’on appelait alors des femmes de petite vertu.
+						On est dans le XVIIIe siècle des <titre>Liaisons dangereuses</titre>, que Mouret filme avec une simplicité frontale, très rohmérienne, et par tableaux successifs, comme pour mieux faire entendre la rhétorique de l’époque où excellent Cécile de France et Edouard Baer.
+					</synopsis>
+					<casting realisateurs="e_mouret"
+					         scenaristes="e_mouret" />
+					<personnages>
+						<personnage incarne_par="c_de_france">Madame de La Pommeraye</personnage>
+						<personnage incarne_par="e_baer">Marquis des Arcis</personnage>
+						<personnage incarne_par="a_isaaz">Mademoiselle de Joncquières</personnage>
+						<personnage incarne_par="n_dontcheva">Madame de Joncquières</personnage>
+						<personnage incarne_par="l_calamy">L'amie de Madame de La Pommeraye</personnage>
+						<personnage incarne_par="jm_lahmi">Un noble</personnage>
+					</personnages>
+				</film>
+
+				<film id="le_pape_francois" pays="ITA CHE DEU FRA" annee_production="2018"
+					  duree="PT1H36M" date_sortie="2018-09-12">
+					<titre>Le Pape François</titre>
+					<!-- ce n'est pas à proprement parler un sous-titre, mais cela
+					     permet d'illuster cette possibilité -->
+					<sous-titre>Un homme de parole</sous-titre>
+					<synopsis>
+						<titre>Le Pape François, un homme de parole</titre> : un film <important>produit par le Vatican</important> et réalisé par Wim Wenders, le cinéaste de <titre>Paris-Texas</titre> et des <titre>Ailes du désir</titre>. Un <important>portrait hagiographique du 266e Souverain Pontife</important> et premier d’Amérique du Sud, héritier direct, selon Wenders, de François d’Assise.
+						Le film est construit autour des entretiens en espagnol que le pape, plein cadre et face caméra, a accordés à Wenders, sur les sujets habituels : l’avenir de la planète, les victimes des guerres, la pauvreté dans le monde, la place des femmes dans l’Eglise, le scandale des prêtres pédophiles...  Bref, ce n’est <important>ni une enquête ni un documentaire critique</important>, c’est, selon les propres mots de Wim Wenders « <important>un film d’amour</important> ».
+					</synopsis>
+					<casting realisateurs="w_wenders"
+					         scenaristes="w_wenders" />
+					<personnages>
+					</personnages>
+				</film>
+
+				<film id="whitney" pays="GBR USA" annee_production="2018"
+					  duree="PT2H0M" date_sortie="2018-09-05">
+					<titre>Whitney</titre>
+					<synopsis>
+						Autre doc, mais sur une figure moins christique (encore que...) : <titre>Whitney</titre>, le documentaire consacré par Kevin McDonald, le réalisateur du <titre>Dernier Roi d’Ecosse</titre> à la reine <important>Whitney Houston, icône pop disparue en 2012, à 48 ans, d’une overdose</important> de médocs et surtout de coke.
+						Récit de son <important>enfance</important>, pavée de <important>traumatismes</important> (dont l’agression sexuelle commise par sa cousine Dee Dee Warwick), de ses <important>amours tempétueuses</important> et bi, de sa carrière et, derrière les 200 millions d’albums  vendus, de sa descente aux enfers. Portrait aussi d’une femme devenue un symbole national après avoir, en 1991,  interprété, façon gospel, l’hymne américain lors du SuperBowl. Bref, sur l’héroïne de <titre>Bodyguard</titre>, un doc classique qui mêle images d’archives et témoignages de ses proches.
+					</synopsis>
+					<casting realisateurs="k_macdonald"
+					         scenaristes="k_macdonald" />
+					<personnages>
+						<personnage incarne_par="w_houston">Whytney Houston</personnage>
+					</personnages>
+				</film>
+
+			</films>
+
+		</emission>
+
+	</emissions>
+
+</masque_plume>
+
